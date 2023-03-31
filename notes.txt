@@ -1,0 +1,17 @@
+doublerAppend + extraLargeArray = 5.294375 ms
+doublerInsert + extraLargeArray = 698.54 ms
+
+doublerAppend + largeArray = append 880.084 μs
+doublerInsert + largeArray = insert 5.301375 ms
+
+doublerAppend + mediumArray = append 610.041 μs
+doublerInsert + mediumArray = insert 456.209 μs
+
+doublerAppend + smallArray = append 1.167 μs
+doublerInsert + smallArray = insert 3.625 μs
+
+doublerAppend + tinyArray = append 2 μs
+doublerInsert + tinyArray = insert 18.833 μs
+
+
+The doublerAppend() function scales so much better than the insert function. When the parameter gets larger the time complexity only goes up by a small bit. The insert function is going up by hundreds of ms when the number grows because the insert function is using unshift which will slow down the run time because its adding to the front of the array instead of just slapping it on the back
